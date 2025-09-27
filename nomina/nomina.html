@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Nómina</title>
+    <link rel="stylesheet" href="style/style_nomina.css">
+</head>
+<body>
+    <form name="form1" action="">
+        <h2>Registro de Nómina</h2>
+
+        <input type="text" id="idEmpleado" placeholder="ID Empleado"><br>
+        <input type="text" id="nombre" placeholder="Nombre"><br>
+        <input type="text" id="horas" placeholder="Horas trabajadas (semana)"><br>
+        <input type="text" id="costo" placeholder="Costo por hora"><br>
+
+        <input type="text" id="horasNormales" placeholder="Horas Normales" readonly><br>
+        <input type="text" id="horasExtras" placeholder="Horas Extras" readonly><br>
+        <input type="text" id="subtotal" placeholder="Subtotal" readonly><br>
+        <input type="text" id="ispt" placeholder="ISPT (10%)" readonly><br>
+        <input type="text" id="monto" placeholder="Monto a Pagar" readonly><br>
+
+        <div class="botones">
+            <button type="button" onclick="calcularNomina()">Calcular</button>
+            <button type="button" onclick="limpiar()">Limpiar</button>
+        </div>
+    </form>
+    <script src="script/script.js"></script>
+</body>
+</html>
