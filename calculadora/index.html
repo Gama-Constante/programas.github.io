@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <form name="form1" action="">
+        <input type="text" name="numero1" id="numero1" placeholder="Número 1">
+        <input type="text" name="numero2" id="numero2" placeholder="Número 2">
+        <input type="text" name="resultado" id="resultado" placeholder="Resultado" readonly>
+
+        <br><br>
+
+        <button type="button" onclick="operar('+')">+</button>
+        <button type="button" onclick="operar('-')">-</button>
+        <button type="button" onclick="operar('*')">*</button>
+        <button type="button" onclick="operar('/')">/</button>
+        <button type="button" onclick="operar('^')">x²</button>
+        <button type="button" onclick="limpiar()">C</button>
+    </form>
+    <script src="script/script.js"></script>
+</body>
+</html>
