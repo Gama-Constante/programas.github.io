@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+    <link rel="stylesheet" href="style/styles.css">
+
+</head>
+<body>
+    <form name="form1" action="">
+        <input type="text" name="numero" id="numero"
+        placeholder="Ingrese un número">
+        <input type="text" name="resultado" id="resultado"
+        placeholder="Resultado">
+
+    <button type="button"
+        onclick="calcularCuadrado()">
+        Calcular cuadrado
+    </button>
+    <form>
+
+</body>
+</html>
+
+<script>
+    function calcularCuadrado() {
+        let numero = document.getElementById("numero").value;
+        if (isNaN(numero) || numero === "") {
+            alert("Por favor ingrese un número válido");
+            document.getElementById("numero").value = "";
+            return;
+        }
+
+        let resultado = numero * numero;
+        document.getElementById("resultado").value = resultado;
+    }
+</script>
