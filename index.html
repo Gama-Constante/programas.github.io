@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Programas</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <h1>Página de Programas</h1>
+    <p>Bienvenido a la página de programas. Selecciona una opción:</p>
+
+    <!-- Botones -->
+    <div class="botones">
+        <button onclick="inicio()">Inicio</button>
+        <button onclick="mostrar('cuadrado/cuadradoText.html')">Cuadrado</button>
+        <button onclick="mostrar('nomina/nomina.html')">Nómina</button>
+        <button onclick="mostrar('calculadora/index.html')">Calculadora</button>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div id="contenido">
+        <h2>¡Bienvenido!</h2>
+        <p>Has regresado a la página de inicio. Selecciona un programa para continuar.</p>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
