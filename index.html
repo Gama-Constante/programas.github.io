@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Programas</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <h1>Página de Programas</h1>
+    <p>Bienvenido a la página de programas. Selecciona una opción:</p>
+
+    <!-- Botones -->
+    <div class="botones">
+        <button onclick="inicio()">Inicio</button>
+        <button onclick="mostrar('cuadrado/cuadradoText.html')">Cuadrado</button>
+        <button onclick="mostrar('nomina/nomina.html')">Nómina</button>
+        <button onclick="mostrar('calculadora/index.html')">Calculadora</button>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div id="contenido">
+        <h2>¡Bienvenido!</h2>
+                <p>Has regresado a la página de inicio. Selecciona un programa para continuar.</p>
+    </div>
+
+    <!-- Script para cargar contenido -->
+    <script>
+        // Función para mostrar contenido externo
+        function mostrar(ruta) {
+            fetch(ruta)
+                .then(response => {
+                    if (!response.ok) throw new Error("No se pudo cargar el archivo: " + ruta);
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('contenido').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('contenido').innerHTML = "<p>Error al cargar el contenido.</p>";
+                    console.error(error);
+                });
+        }
+
+        // Función específica para el botón de Inicio
+        function inicio() {
+            document.getElementById('contenido').innerHTML = `
+                <h2>¡Bienvenido!</h2>
+                <p>Has regresado a la página de inicio. Selecciona un programa para continuar.</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
